@@ -22,11 +22,31 @@ namespace Valide_saisie
 
         private void btneff_Click(object sender, EventArgs e)
         {
-            txtBName.Text = "";
-            txtBDate.Text = "";
-            txtBSum.Text = "";
-            txtBCP.Text = "";
-
+           
+            foreach (var item in Controls)
+            {
+                if (item is TextBox)
+                {
+                    TextBox txtb = item as TextBox;
+                    txtb.Text = "";
+                   
+                }
+            }
+            //txtBName.Text = "";
+            //txtBDate.Text = "";
+            //txtBSum.Text = "";
+            //txtBCP.Text = "";
+            //  OU pour remonter au parent direct 
+        //        Button btn = sender as Button;
+        //    foreach (var item in btn.Parent.Controls)
+        //    {
+        //        if (item is TextBox)
+        //        {
+        //            TextBox txtb = item as TextBox;
+        //            txtb.Text = "";
+                   
+        //        }
+        //    }
         }
 
         private void txtB_FocusON(object sender, EventArgs e) 
@@ -68,12 +88,16 @@ namespace Valide_saisie
                 txtb.Text = error;
                 btnval.Enabled = false;
             }
-            else 
-                btnval.Enabled = true;
+            ALLValid();
         }
 
-     
 
-     
+        private void ALLValid()
+        {
+            btnval.Enabled = (txtBCP.ForeColor == Color.Black && txtBDate.ForeColor == Color.Black && txtBName.ForeColor == Color.Black && txtBSum.ForeColor == Color.Black);
+        }
+
+
+
     }
 }

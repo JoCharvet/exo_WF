@@ -9,7 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryAddi", "ClassLi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valide_saisie", "Valide_saisie\Valide_saisie.csproj", "{20437B29-FFEB-41B7-BAF4-E9F232898A0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkb_radiob", "checkb_radiob\checkb_radiob.csproj", "{4638F404-8639-49F1-8A17-21D297E33784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkb_radiob", "checkb_radiob\checkb_radiob.csproj", "{4638F404-8639-49F1-8A17-21D297E33784}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Op_ListBox_WF", "Op_ListBox_WF\Op_ListBox_WF.csproj", "{0F76EB2F-694E-407F-B30A-253FC226DC61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB_CB", "LB_CB\LB_CB.csproj", "{05303216-50BF-4871-B01D-9490C20DF607}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{4638F404-8639-49F1-8A17-21D297E33784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4638F404-8639-49F1-8A17-21D297E33784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4638F404-8639-49F1-8A17-21D297E33784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F76EB2F-694E-407F-B30A-253FC226DC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F76EB2F-694E-407F-B30A-253FC226DC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F76EB2F-694E-407F-B30A-253FC226DC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F76EB2F-694E-407F-B30A-253FC226DC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05303216-50BF-4871-B01D-9490C20DF607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05303216-50BF-4871-B01D-9490C20DF607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05303216-50BF-4871-B01D-9490C20DF607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05303216-50BF-4871-B01D-9490C20DF607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

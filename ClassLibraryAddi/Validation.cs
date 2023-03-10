@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Messaging;
@@ -52,10 +53,14 @@ namespace ClassLibraryAddi
         /// <returns>the error message</returns>
         public string CheckDate(string _date)
         {
-            return DateTime.TryParse(_date, out DateTime _madate) ? 
+            return DateTime.TryParseExact(_date,"dd/MM/yyyy",new CultureInfo("fr-FR"),DateTimeStyles.None, out DateTime _madate) ? 
                 ((_madate > DateTime.Today) ? "": errors[5] )
                 :errors[4];
         }
+        //public string CheckDateFormat(string _date)
+        //{
+        //    return (int.TryParse(_date.Substring(3, 2), out int t) && t < 12) ? CheckDate(_date) : "Format date francaise uniquement";
+        //}
 
         /// <summary>
         ///  Used to check if one sum respect some conditions
