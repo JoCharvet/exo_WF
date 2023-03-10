@@ -35,7 +35,7 @@
             this.btnSToT = new System.Windows.Forms.Button();
             this.btnSToTAll = new System.Windows.Forms.Button();
             this.btnTToS = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnTToSAll = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.comboSource.Name = "comboSource";
             this.comboSource.Size = new System.Drawing.Size(121, 23);
             this.comboSource.TabIndex = 2;
+            this.comboSource.SelectedIndexChanged += new System.EventHandler(this.comboSource_SelectedIndexChanged);
             // 
             // lstBCible
             // 
@@ -74,45 +75,55 @@
             this.lstBCible.Name = "lstBCible";
             this.lstBCible.Size = new System.Drawing.Size(120, 154);
             this.lstBCible.TabIndex = 3;
+            this.lstBCible.SelectedIndexChanged += new System.EventHandler(this.lstBCible_SelectedIndexChanged);
             // 
             // btnSToT
             // 
+            this.btnSToT.Enabled = false;
             this.btnSToT.Location = new System.Drawing.Point(158, 41);
             this.btnSToT.Name = "btnSToT";
             this.btnSToT.Size = new System.Drawing.Size(53, 23);
             this.btnSToT.TabIndex = 4;
             this.btnSToT.Text = ">";
             this.btnSToT.UseVisualStyleBackColor = true;
+            this.btnSToT.Click += new System.EventHandler(this.btnSToT_Click);
             // 
             // btnSToTAll
             // 
+            this.btnSToTAll.Enabled = false;
             this.btnSToTAll.Location = new System.Drawing.Point(158, 70);
             this.btnSToTAll.Name = "btnSToTAll";
             this.btnSToTAll.Size = new System.Drawing.Size(53, 23);
             this.btnSToTAll.TabIndex = 5;
             this.btnSToTAll.Text = ">>";
             this.btnSToTAll.UseVisualStyleBackColor = true;
+            this.btnSToTAll.Click += new System.EventHandler(this.btnSToTAll_Click);
             // 
             // btnTToS
             // 
+            this.btnTToS.Enabled = false;
             this.btnTToS.Location = new System.Drawing.Point(158, 142);
             this.btnTToS.Name = "btnTToS";
             this.btnTToS.Size = new System.Drawing.Size(53, 23);
             this.btnTToS.TabIndex = 6;
             this.btnTToS.Text = "<";
             this.btnTToS.UseVisualStyleBackColor = true;
+            this.btnTToS.Click += new System.EventHandler(this.btnTToS_Click);
             // 
-            // button2
+            // btnTToSAll
             // 
-            this.button2.Location = new System.Drawing.Point(158, 171);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "<<";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTToSAll.Enabled = false;
+            this.btnTToSAll.Location = new System.Drawing.Point(158, 171);
+            this.btnTToSAll.Name = "btnTToSAll";
+            this.btnTToSAll.Size = new System.Drawing.Size(53, 23);
+            this.btnTToSAll.TabIndex = 7;
+            this.btnTToSAll.Text = "<<";
+            this.btnTToSAll.UseVisualStyleBackColor = true;
+            this.btnTToSAll.Click += new System.EventHandler(this.btnTToSAll_Click);
             // 
             // btnUp
             // 
+            this.btnUp.Enabled = false;
             this.btnUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnUp.Location = new System.Drawing.Point(237, 201);
             this.btnUp.Name = "btnUp";
@@ -120,9 +131,11 @@
             this.btnUp.TabIndex = 8;
             this.btnUp.Text = "↑";
             this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
             // btnDown
             // 
+            this.btnDown.Enabled = false;
             this.btnDown.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDown.Location = new System.Drawing.Point(276, 201);
             this.btnDown.Name = "btnDown";
@@ -130,6 +143,7 @@
             this.btnDown.TabIndex = 9;
             this.btnDown.Text = "↓";
             this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // LesListes
             // 
@@ -138,7 +152,7 @@
             this.ClientSize = new System.Drawing.Size(382, 255);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnTToSAll);
             this.Controls.Add(this.btnTToS);
             this.Controls.Add(this.btnSToTAll);
             this.Controls.Add(this.btnSToT);
@@ -162,7 +176,7 @@
         private Button btnSToT;
         private Button btnSToTAll;
         private Button btnTToS;
-        private Button button2;
+        private Button btnTToSAll;
         private Button btnUp;
         private Button btnDown;
     }
