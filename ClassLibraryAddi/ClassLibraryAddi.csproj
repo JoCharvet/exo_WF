@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Additionneur.cs" />
+    <Compile Include="Emprunt\Emprunt.cs" />
+    <Compile Include="Emprunt\EnumPeriod.cs" />
+    <Compile Include="Emprunt\ValidEmprunt.cs" />
     <Compile Include="MaCouleur.cs" />
     <Compile Include="TextParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
