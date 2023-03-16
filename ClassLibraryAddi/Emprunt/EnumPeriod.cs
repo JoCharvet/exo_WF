@@ -9,7 +9,7 @@ namespace ClassLibraryAddi.Emprunts
     public enum EnumPeriod
     {
         Mensuelle = 1,
-        Bimestrielle = 6,
+        Bimestrielle = 2,
         Trimestrielle = 3,
         Semestrielle = 6,
         Annuelle = 12

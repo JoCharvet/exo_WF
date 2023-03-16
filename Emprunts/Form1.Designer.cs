@@ -121,7 +121,6 @@
             this.hscbDuree.Name = "hscbDuree";
             this.hscbDuree.Size = new System.Drawing.Size(131, 17);
             this.hscbDuree.TabIndex = 7;
-            this.hscbDuree.ValueChanged += new System.EventHandler(this.hscbDuree_ValueChanged);
             // 
             // gbTaux
             // 
@@ -142,7 +141,6 @@
             this.rdb9.Name = "rdb9";
             this.rdb9.Size = new System.Drawing.Size(41, 19);
             this.rdb9.TabIndex = 2;
-            this.rdb9.TabStop = true;
             this.rdb9.Tag = "9";
             this.rdb9.Text = "9%";
             this.rdb9.UseVisualStyleBackColor = true;
@@ -155,7 +153,6 @@
             this.rdb8.Name = "rdb8";
             this.rdb8.Size = new System.Drawing.Size(41, 19);
             this.rdb8.TabIndex = 1;
-            this.rdb8.TabStop = true;
             this.rdb8.Tag = "8";
             this.rdb8.Text = "8%";
             this.rdb8.UseVisualStyleBackColor = true;
@@ -164,6 +161,7 @@
             // rdb7
             // 
             this.rdb7.AutoSize = true;
+            this.rdb7.Checked = true;
             this.rdb7.Location = new System.Drawing.Point(32, 36);
             this.rdb7.Name = "rdb7";
             this.rdb7.Size = new System.Drawing.Size(41, 19);
@@ -200,9 +198,9 @@
             this.lblNbRemb.ForeColor = System.Drawing.Color.Red;
             this.lblNbRemb.Location = new System.Drawing.Point(382, 241);
             this.lblNbRemb.Name = "lblNbRemb";
-            this.lblNbRemb.Size = new System.Drawing.Size(19, 15);
+            this.lblNbRemb.Size = new System.Drawing.Size(13, 15);
             this.lblNbRemb.TabIndex = 11;
-            this.lblNbRemb.Text = "40";
+            this.lblNbRemb.Text = "2";
             // 
             // lblMontant
             // 
@@ -210,9 +208,9 @@
             this.lblMontant.ForeColor = System.Drawing.Color.Red;
             this.lblMontant.Location = new System.Drawing.Point(500, 290);
             this.lblMontant.Name = "lblMontant";
-            this.lblMontant.Size = new System.Drawing.Size(49, 15);
+            this.lblMontant.Size = new System.Drawing.Size(34, 15);
             this.lblMontant.TabIndex = 12;
-            this.lblMontant.Text = "5 483,36";
+            this.lblMontant.Text = "51.52";
             // 
             // lblRemboursements
             // 

@@ -46,12 +46,12 @@ namespace ClassLibraryAddi.Emprunts
         public EnumPeriod PeriodiciteChoisie
         {
             get => periodiciteChoisie;
-            set { periodiciteChoisie = value; NotifyPropertyChanged(); CalculeMontantPeriod(); }
+            set { periodiciteChoisie = value; NotifyPropertyChanged() ; CalculeMontantPeriod(); }
         }
         public double MontantPeriod
         {
             get => montantPeriod;
-            set { montantPeriod = value; NotifyPropertyChanged(); }
+            set { montantPeriod = value; NotifyPropertyChanged(); CalculeMontantPeriod(); }
         }
 
         public Emprunt() { }
@@ -69,10 +69,12 @@ namespace ClassLibraryAddi.Emprunts
         public void CalculeMontantPeriod()
         {
             double K = this.capEmprunt;
-            double t = this.tauxEmpruntAnnuel * ((int)this.periodiciteChoisie / 12.0d);
-            double n = this.dureeEmprunt;
+            double t = (this.tauxEmpruntAnnuel/100.0d) * ((int)this.periodiciteChoisie / 12.0d);
+            double n = CalculerNbMensualite();
             this.montantPeriod = K * (t / (1 - Math.Pow((1 + t), -n)));
         }
+
+        public int CalculerNbMensualite() => dureeEmprunt/(int)periodiciteChoisie;
 
 
         //private void CalculerMontantPeriode(EnumPeriod _periodChoisie)
