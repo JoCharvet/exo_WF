@@ -15,28 +15,27 @@ namespace ClassLibraryAddi
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        Color color;
 
-        int r = 0;
-        int v = 0;
-        int b = 0;
+        }
+        private Color color;
+
+
         public int R
         {
-            get { return r; }
-            set { r = value; NotifyPropertyChanged(); Color = Color.FromArgb(this.r, this.v, this.b); }
+            get { return color.R; }
+            set { NotifyPropertyChanged(); Color = Color.FromArgb(value, color.G, color.B); }
         }
 
         public int V
         {
-            get { return v; }
-            set { v = value; NotifyPropertyChanged(); Color = Color.FromArgb(this.r, this.v, this.b); }
+            get { return color.G; }
+            set { NotifyPropertyChanged(); Color = Color.FromArgb(color.R, value, color.B); }
         }
 
         public int B
         {
-            get { return b; }
-            set { b = value; NotifyPropertyChanged(); Color = Color.FromArgb(this.r, this.v, this.b); }
+            get { return color.B; }
+            set {  NotifyPropertyChanged(); Color = Color.FromArgb(color.R, color.G, value); }
         }
 
         public Color Color 
@@ -46,15 +45,15 @@ namespace ClassLibraryAddi
         }
 
 
-        public MaCouleur() { }
+        public MaCouleur() 
+        {
+            color =Color.White;
+        }
 
 
         public MaCouleur(Color color)
         {
             this.color = color;
-            this.r = color.R;
-            this.v = color.G;
-            this.b = color.B;
         }
     }
 }

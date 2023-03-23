@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefilementColor", "Defileme
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emprunts", "Emprunts\Emprunts.csproj", "{9E043340-FA1A-4AEC-BBDF-498C979A0A71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreerFormulaire", "CreerFormulaire\CreerFormulaire.csproj", "{AEB32D86-72E8-444C-BCE3-7C299359E4EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreerFormulaire", "CreerFormulaire\CreerFormulaire.csproj", "{AEB32D86-72E8-444C-BCE3-7C299359E4EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreerDesFormulaires", "CreerDesFormulaires\CreerDesFormulaires.csproj", "{5AE0757F-38CF-4EF8-80CE-B8ED4D56D7C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{AEB32D86-72E8-444C-BCE3-7C299359E4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEB32D86-72E8-444C-BCE3-7C299359E4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEB32D86-72E8-444C-BCE3-7C299359E4EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE0757F-38CF-4EF8-80CE-B8ED4D56D7C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE0757F-38CF-4EF8-80CE-B8ED4D56D7C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE0757F-38CF-4EF8-80CE-B8ED4D56D7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE0757F-38CF-4EF8-80CE-B8ED4D56D7C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

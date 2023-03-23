@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\checkb_radiob\checkb_radiob.csproj" />
+    <ProjectReference Include="..\ClassLibraryAddi\ClassLibraryAddi.csproj" />
+    <ProjectReference Include="..\DefilementColor\DefilementColor.csproj" />
+    <ProjectReference Include="..\Emprunts\Emprunts.csproj" />
+    <ProjectReference Include="..\LB_CB\LB_CB.csproj" />
+    <ProjectReference Include="..\Op_ListBox_WF\Op_ListBox_WF.csproj" />
+    <ProjectReference Include="..\Super_Addionneur_4000\Super_Addionneur_4000.csproj" />
+    <ProjectReference Include="..\Valide_saisie\Valide_saisie.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

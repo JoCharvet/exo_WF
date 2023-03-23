@@ -24,5 +24,7 @@ namespace DefilementColor
             txtBVert.BackColor = Color.FromArgb(0, macol.V,0);
             txtBBleu.BackColor = Color.FromArgb(0, 0,macol.B);
         }
+
+        
     }
 }

@@ -18,6 +18,8 @@ namespace Super_Addionneur_4000
         {
             InitializeComponent();
             addi = new Additionneur();
+           
+   
 
         }
 

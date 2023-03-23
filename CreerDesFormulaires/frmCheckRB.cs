@@ -1,8 +1,8 @@
 namespace checkb_radiob
 {
-    public partial class Form1 : Form
+    public partial class frmCheckRB : Form
     {
-        public Form1()
+        public frmCheckRB()
         {
             InitializeComponent();
         }
@@ -24,15 +24,9 @@ namespace checkb_radiob
 
         private void txtBInput_TextChanged(object sender, EventArgs e)
         {
-            if (txtBInput.Text != "")
-            {
+            if (txtBInput.Text != "" && !gBChoices.Enabled)
                 gBChoices.Enabled = true;
-                txtBOutput.Text = txtBInput.Text;
-            }
-            else 
-            { 
-                gBChoices.Enabled = false;
-            }  
+            txtBOutput.Text=txtBInput.Text;
         }
 
         private void cBBGColor_CheckedChanged(object sender, EventArgs e)
@@ -56,21 +50,20 @@ namespace checkb_radiob
             if (rb.Checked)
             {
                 txtBOutput.CharacterCasing = (rb.Text == "Minuscules") ? CharacterCasing.Lower:CharacterCasing.Upper;
-            }        
+            }
+            else
+            {
+                txtBOutput.CharacterCasing = CharacterCasing.Normal;
+                txtBOutput.Text = txtBInput.Text;
+            }
+            
+           
         }
 
         private void gBChar_EnabledChanged(object sender, EventArgs e)
         {
             if (!gBChar.Enabled)
-            {
-                GroupBox gb = sender as GroupBox;
                 txtBOutput.ForeColor = Color.Black;
-                foreach (RadioButton item in gb.Controls)
-                {
-                    item.Checked = false;
-                }
-            }
-                
         }
 
         private void gBBackground_EnabledChanged(object sender, EventArgs e)
@@ -91,19 +84,7 @@ namespace checkb_radiob
         private void gBCase_EnabledChanged(object sender, EventArgs e)
         {
             if (!gBBackground.Enabled)
-            {
-                GroupBox gb = sender as GroupBox;
-                
-                foreach (RadioButton item in gb.Controls)
-                {
-                    item.Checked = false;
-                }
-                txtBOutput.CharacterCasing=CharacterCasing.Normal;
                 txtBOutput.Text = txtBInput.Text;
-            }
-
-        
-                
         }
         //private void ResetRadio(GroupBox _gb)
         //{
