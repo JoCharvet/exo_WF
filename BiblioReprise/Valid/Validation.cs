@@ -27,5 +27,11 @@ namespace BiblioReprise.Valid
         {
             return Regex.IsMatch(_cp, "^[\\d]{5}$") ? "" : "Seulement 5 nombres";
         }
+        public string CheckAmmount(string _ammount)
+        {
+            return (double.TryParse(_ammount.Replace(',', '.'), out double res)) ? 
+                ((res >0 ) ? "": "supérieur a zéro" )
+            : "seulement des nombres et séparateur" ;
+        }
     }
 }
